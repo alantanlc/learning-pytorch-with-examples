@@ -1,11 +1,19 @@
+# PyTorch: Tensors
+# Numpy is a great framework, but it cannot utilize GPUs to accelerate its numerical computations. For modern neural networks, GPUs often provide speedups of 50x or greater, so unfortunately numpy won't be enough for modern deep learning.
+# Here we introduct the most fundamental PyTorch concept: the Tensor. A PyTorch Tensor is conceptually identical to a numpy array: a Tensor is an n-dimensional array, and PyTorch provides many functions for operating on these Tensors. Behind the scenes, Tensors can keep track of a computational graph and gradients, but they're also useful as a generic tool for scientific computing.
+
+# Also unlike numpy, PyTorch Tensors can utilize GPUs to accelerate their numeric computations. To run a PyTorch Tensor on GPU, you simply need to cast it to a new datatype.
+
+# Here we use PyTorch Tensors to fit a two-layer network to random data. Like the numpy example above we need to manually implement the forward and backward passes through the network:
 
 # -*- coding: utf-8 -*-
 
 import torch
+import numpy as np
 
 dtype = torch.float
 device = torch.device("cpu")
-# device = torch.device("cuda:0") # Uncomment this to run on GPU
+# device = torch.device("cuda:0")   # Uncomment this to run on GPU
 
 # N is batch size; D_in is input dimension;
 # H is hidden dimension; D_out is output dimension.
