@@ -1,5 +1,7 @@
 # Autograd
+
 # PyTorch: Tensors and autograd
+
 # In the warm-up-numpy.py and pytorch-tensors.py examples, we had to manually implement both the forward and backward passes of our neural network. Manually implementing the backward pass is not a big deal for a small two-layer network, but can quickly get very hairy for large complex networks.
 
 # Thankfully, we can use automatic differentation to automate the computation of backward passes in neural networks. The autograd package in PyTorch provides exactly this functionality. When using autograd, the forward pass of your network will define a computational graph; nodes in the graph will be Tensors, and edges will be functions that produce output Tensors from input Tensors. Backpropagating through this graph then allows you to easily compute gradients.

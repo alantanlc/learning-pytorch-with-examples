@@ -1,5 +1,7 @@
 # Tensors
+
 # Warm-up: numpy
+
 # Before introducing PyTorch, we will first implement the network using numpy.
 # Numpy provides an n-dimensional array object, and many functions for manipulating these arrays. Numpy is a generic framework for scientific computing; it does not know anything about computation graphs, or deep learning, or gradients. However we can easily use numpy to fit a two-layer network to random data by manually implementing the forward and backward passes through the network using numpy operations.
 
